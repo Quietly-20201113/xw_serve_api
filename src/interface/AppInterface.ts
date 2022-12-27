@@ -1,17 +1,10 @@
 import { dataType } from "@/types/ordinary-type";
+import { ResultUtil } from "@/utils/ResultUtil";
 
 export interface AppInterface {
-  getTitle(id: string): {
-    code: number;
-    data: dataType;
-    msg: string;
-  };
-  getName(): string;
-  getAge(): string;
-  setName(): string;
-  setTitle(id: string): {
-    code: number;
-    data: dataType;
-    msg: string;
-  };
+  getTitle(): ResultUtil;
+  getName(): ResultUtil;
+  getAge(): ResultUtil;
+  setName(): ResultUtil;
+  setTitle(): ResultUtil;
 }

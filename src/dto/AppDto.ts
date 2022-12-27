@@ -1,9 +1,16 @@
+import { IsString, MinLength } from "class-validator";
+
 export class AppDto {
-  public id: string | undefined;
-  public title: string | undefined;
-  public name: string | undefined;
+  @MinLength(16)
+  @IsString()
+  public id!: string;
+  @IsString()
+  public title!: string;
+  @IsString()
+  public name!: string;
 }
 
 export class GetNameDto extends AppDto {
-  public type: string | undefined;
+  @IsString()
+  public type!: string;
 }

@@ -15,10 +15,10 @@ export class AppController {
     msg: string;
   } {
     // 客户端传入的数据
-    console.log(data);
+    console.log("传入数据", data);
 
     // 返回给客户端的数据
-    return this.appService.setTitle(data.id);
+    return this.appService.setTitle();
   }
 
   @Get("getTitle")
